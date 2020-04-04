@@ -1,5 +1,8 @@
 
 ### `npm install`
+### `npm install react-redux`
+### `npm install redux`
+
 
 ### `npm start`
 
