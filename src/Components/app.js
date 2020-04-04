@@ -16,7 +16,9 @@ const AppLayout = (props) => {
     setPrice(price + 100);
   };
   let sub = () => {
+    if(price>100){
     dispatch(decrement());
+    }
     console.log("ddd");
     if (price > 100) {
       setPrice(price - 100);
@@ -28,7 +30,9 @@ const AppLayout = (props) => {
     }
   };
   let cartpage = () => {
+    if(isadded){
     props.history.push("/cart");
+    }
   };
   return (
     <React.Fragment>
