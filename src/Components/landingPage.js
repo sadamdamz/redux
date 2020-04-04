@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import auth from "./auth";
+import  './components.css'
+
 
 export class LandingPage extends Component {
   constructor(props) {
@@ -29,8 +31,8 @@ export class LandingPage extends Component {
   render() {
     return (
       <div>
-        <h1>Landing Page</h1>
-        <form onSubmit={(e) => this.submit(e)}>
+        <h1>Signin</h1>
+        <form onSubmit={(e) => this.submit(e)} className="mainform">
           <input
             type="text"
             value={this.state.username}

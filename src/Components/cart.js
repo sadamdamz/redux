@@ -1,16 +1,28 @@
-import React, { Component } from 'react';
+import React, { useState } from "react";
+import store from "../store";
+import "./components.css";
 
-class cart extends Component {
-    constructor(props){
-        super(props);
-    }
-    render() {
-        return (
-            <div>
-                <h1>{price}</h1>
-            </div>
-        );
-    }
-}
+const cart = (props) => {
+  const state = store.getState();
+  const price = 100 * state;
+
+  let checkoutpage = () => {
+    props.history.push("/checkout");
+  };
+
+  return (
+    <div className="cartpage">
+      <h1>Your Cart </h1>
+      <img src={require("../images/download.jpeg")} />
+      <p>
+        Price <span>{price}</span>
+      </p>
+      <p>
+        Qty <span>{state}</span>
+      </p>
+      <button onClick={checkoutpage}>Checkout</button>
+    </div>
+  );
+};
 
 export default cart;
